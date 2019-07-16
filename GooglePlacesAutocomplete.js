@@ -130,7 +130,7 @@ export default class GooglePlacesAutocomplete extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let listViewDisplayed = this.state.listViewDisplayed || true;
+    let listViewDisplayed = typeof this.state.listViewDisplayed === 'boolean' ? this.state.listViewDisplayed : true;
 
     if (nextProps.listViewDisplayed !== 'auto') {
       listViewDisplayed = nextProps.listViewDisplayed;
